@@ -1,0 +1,66 @@
+# Counter JS
+
+This is a simple JS to add a counter to your webpage
+
+## Usage
+
+### Full Example
+
+**Plain Hardcoded**
+See the examples/counter.html	
+
+**Ajax**
+See the examples/ajax.html	
+	
+### JavaScript 
+
+	jCounter({startCount : 100, slope : 1.5, afterUpdateCallback: function(currentCount){
+
+		count = currentCount + '';
+		count_items = count.padWithZeros(10).split("");
+	
+		for(i = 0; i < count_items.length; i++ ){
+			$("#tick_"+i).html(count_items[i])
+		}
+	
+	}}).countIt()
+
+### HTML
+
+	<div id="tick_0">
+	  0
+	</div>
+	<div id="tick_1">
+	  0
+	</div>
+	<div id="tick_2">
+	  0
+	</div>
+	<div id="tick_3">
+	  0
+	</div>
+	<div id="tick_4">
+	  0
+	</div>
+	<div id="tick_5">
+	  0
+	</div>
+	<div id="tick_6">
+	  0
+	</div>
+	<div id="tick_7">
+	  0
+	</div>
+	<div id="tick_8">
+	  0
+	</div>
+	<div id="tick_9">
+	  0
+	</div>
+	<div id="tick_10">
+	  0
+	</div>
+	
+## Credits
+
+by jason amster

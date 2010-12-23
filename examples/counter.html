@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" charset="utf-8" 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" 	src="../javascripts/counter.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				jCounter({startCount : 100, slope : 1.5, afterUpdateCallback: function(currentCount){
+
+					count = currentCount + '';
+					count_items = count.padWithZeros(10).split("");
+
+					for(i = 0; i < count_items.length; i++ ){
+						$("#tick_"+i).html(count_items[i])
+					}
+
+				}}).countIt()
+			});
+		</script>
+
+		<style type="text/css" media="screen">
+			.tick{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div  class="tick" id="tick_0">
+		  0
+		</div>
+		<div  class="tick" id="tick_1">
+		  0
+		</div>
+		<div  class="tick" id="tick_2">
+		  0
+		</div>
+		<div  class="tick" id="tick_3">
+		  0
+		</div>
+		<div  class="tick" id="tick_4">
+		  0
+		</div>
+		<div  class="tick" id="tick_5">
+		  0
+		</div>
+		<div  class="tick" id="tick_6">
+		  0
+		</div>
+		<div  class="tick" id="tick_7">
+		  0
+		</div>
+		<div  class="tick" id="tick_8">
+		  0
+		</div>
+		<div  class="tick" id="tick_9">
+		  0
+		</div>
+		<div  class="tick" id="tick_10">
+		  0
+		</div>
+
+	</body>
+
+</html>
