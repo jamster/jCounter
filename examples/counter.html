@@ -9,7 +9,7 @@
 			$(function(){
 				jCounter({startCount : 100, slope : 1.5, afterUpdateCallback: function(currentCount){
 
-					count = currentCount + '';
+					count = currentCount.toString();
 					count_items = count.padWithZeros(10).split("");
 
 					for(i = 0; i < count_items.length; i++ ){
@@ -58,9 +58,7 @@
 		<div  class="tick" id="tick_9">
 		  0
 		</div>
-		<div  class="tick" id="tick_10">
-		  0
-		</div>
+
 
 	</body>
 

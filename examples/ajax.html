@@ -10,14 +10,10 @@
 				$.ajax({ url: "settings.json", 
 						 // dataType: 'json',
 						 success: function(data){
-							console.log(data);
 							data = JSON.parse(data);
-							console.log(data);
 				        	jCounter({startCount : data.startCount, slope : data.slope, afterUpdateCallback: function(currentCount){
-
-								count = currentCount + '';
-								count_items = count.padWithZeros(10).split("");
-
+								count = currentCount.toString();
+								count_items = count.padWithZeros(8).split("");
 								for(i = 0; i < count_items.length; i++ ){
 									$("#tick_"+i).html(count_items[i])
 								}
@@ -60,15 +56,7 @@
 		<div  class="tick" id="tick_7">
 		  0
 		</div>
-		<div  class="tick" id="tick_8">
-		  0
-		</div>
-		<div  class="tick" id="tick_9">
-		  0
-		</div>
-		<div  class="tick" id="tick_10">
-		  0
-		</div>
+
 
 	</body>
 
