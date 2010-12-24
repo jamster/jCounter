@@ -6,9 +6,9 @@
 var jCounter = function(options) {
 
 	var settings = {
-		'startCount'         : 0,
-		'slope' : 1.0,
-		'interval' : 1000,
+		'startCount' : 0, // What is the starting number, should be pulled from DB
+		'slope' : 1.0,  // What is the rate of change of the counter (determined server side hopefully)
+		'interval' : 1000, // How often are we updating the counter (milliseconds)
 		afterUpdateCallback : function(){
 			console.log(currentCount);
 		}
